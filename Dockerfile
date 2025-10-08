@@ -17,7 +17,7 @@ RUN mkdir /var/run/sshd && \
 # Prepare for key-based auth; Ansible will populate authorized_keys
 RUN mkdir -p /home/ubuntu/.ssh && chown ubuntu:ubuntu /home/ubuntu/.ssh
 
-EXPOSE 80 22
+EXPOSE 80
 # Run SSHD in foreground (so container stays up)
 CMD ["/usr/sbin/sshd","-D"]
 
