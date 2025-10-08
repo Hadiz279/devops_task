@@ -6,7 +6,7 @@ ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update && \
     apt-get install -y --no-install-recommends \
       openssh-server sudo curl ca-certificates \
-      htop sysstat net-tools python3 python3-apt && \
+      htop sysstat vim net-tools python3 python3-apt && \
     rm -rf /var/lib/apt/lists/*
 
 # Create sshd run dir and user 'ubuntu'
