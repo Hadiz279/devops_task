@@ -1,21 +1,21 @@
 ---
--name: Install And Start nginx
-host: all #servers playbook can be executed/all services
-become: yes #if you need super_user to run this task
+- name: Install And Start nginx
+  hosts: all #servers playbook can be executed/all services
+  become: yes #if you need super_user to run this task
 
-tasks:
-  - name: Install nginx
-    apt:
-    name: nginx
-    state: latest
+  tasks:
+    - name: Install nginx
+      apt:
+        name: nginx
+        state: latest
 
-  - name: Start nginx
-    service:
-      name: nginx
-      state: started
+    - name: Start nginx
+      service:
+        name: nginx
+        state: started
 
-  - name: Stop nginx
-    service: 
-      name: nginx
-      state: stopped 
+    - name: Stop nginx
+      service: 
+        name: nginx
+        state: stopped 
 
