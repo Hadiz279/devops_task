@@ -1,11 +1,11 @@
 ---
 -name: Install And Start nginx
 host: all #servers playbook can be executed/all services
-become: root #if you need super_user to run this task
+become: yes #if you need super_user to run this task
 
 tasks:
   - name: Install nginx
-  apt:
+    apt:
     name: nginx
     state: latest
 
